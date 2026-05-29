@@ -1,25 +1,22 @@
-import type { Metadata } from 'next';
-import { Geist } from 'next/font/google';
-import { Providers } from './providers';
-import './globals.css';
+import type { Metadata } from 'next'
+import { Geist } from 'next/font/google'
+import './globals.css'
 
-const geist = Geist({ subsets: ['latin'] });
+const geist = Geist({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Trustline',
   description: 'On-chain professional references on Base',
-};
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
-      <body className={geist.className}>
-        <Providers>{children}</Providers>
-      </body>
+      <body className={geist.className}>{children}</body>
     </html>
-  );
+  )
 }
